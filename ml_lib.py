@@ -1,7 +1,7 @@
 import random
 
 class stats:
-    def __init__(self, data):
+    def __init__(self, data:list):
         self.data = data
 
     def z_score(self) -> list:
@@ -22,7 +22,7 @@ class stats:
 
 
 class k_nearest_neighbors:
-    def __init__(self, data, nn, fold):
+    def __init__(self, data:list, nn:int, fold:int):
         self.data = data
         self.nn = nn
         self.fold = fold
@@ -89,7 +89,7 @@ class k_nearest_neighbors:
         return self.cross_validation()
     
 class metrics:
-    def __init__(self, predicted, original, fold):
+    def __init__(self, predicted:list, original:list, fold:list):
         self.predicted = predicted
         self.original = original
         self.fold = fold
