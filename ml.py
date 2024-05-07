@@ -64,7 +64,7 @@ def main() -> None:
     data, rows, _ = import_data(file_name)
 
     if fold > rows:
-        raise TypeError(f'Fold up to {rows}') #allows LOO
+        raise ValueError(f'Fold up to {rows}') #allows LOO
     
     incorrect = True
     while incorrect:
